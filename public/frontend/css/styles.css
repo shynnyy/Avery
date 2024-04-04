@@ -10823,4 +10823,17 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+  .text-body-secondary {
+    color: #6c757d;
+  }
+  /* footer */
+  footer {
+    font-size: 14px;
+    }
+    footer h5 {
+    font-size: 14px;
+    }
+    footer .nav-link {
+    font-size: 14px;
+    }
 }

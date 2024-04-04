@@ -13,4 +13,10 @@ class HomeController extends Controller
     public function female(){
         return view("frontend.female");
     }
+    public function male(){
+        return view("frontend.male");
+    }
+    public function about(){
+        return view("frontend.about");
+    }
 }

@@ -16,8 +16,7 @@
     <body>
         <!-- Navigation-->
         @include('frontend.layouts.navbar')
-        <!-- Header-->
-        @include('frontend.layouts.header')
+
 
         <!-- Section-->
         <div class="content">

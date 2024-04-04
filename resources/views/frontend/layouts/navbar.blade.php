@@ -1,25 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="#!">Avery</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ route('index') }}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('female') }}">About</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">All Products</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                        <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                    </ul>
-                </li>
+            <ul class="navbar-nav me-auto mb-2">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ route('index') }}" style="font-size: 12px;">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('female') }}" style="font-size: 12px;">FEMALE</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('male') }}" style="font-size: 12px;">MALE</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('about') }}" style="font-size: 12px;">ABOUT US</a></li>
             </ul>
             <form class="d-flex">
-                <button class="btn btn-outline-dark" type="submit">
+                <button class="btn" type="submit" style="font-size: 13px;"> <!-- Menambahkan style untuk mengurangi ukuran tombol menjadi 10px -->
                     <i class="bi-cart-fill me-1"></i>
-                    Cart
                     <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                 </button>
             </form>

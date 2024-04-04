@@ -1,5 +1,13 @@
 @extends('frontend.layouts.app')
 @section('contents')
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Avery</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Averythings Youneed Averythings Younique</p>
+        </div>
+    </div>
+</header>
 
 
 <section class="py-5">
@@ -13,7 +21,7 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Fancy Product</h5>
+                            <h5 class="fw-bolder" style="font-size: 14px;">Fancy Product</h5>
                             <!-- Product price-->
                             $40.00 - $80.00
                         </div>
@@ -34,7 +42,7 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Special Item</h5>
+                            <h5 class="fw-bolder" style="font-size: 14px;">Special Item</h5>
                             <!-- Product reviews-->
                             <div class="d-flex justify-content-center small text-warning mb-2">
                                 <div class="bi-star-fill"></div>
@@ -64,7 +72,7 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Sale Item</h5>
+                            <h5 class="fw-bolder" style="font-size: 14px;">Sale Item</h5>
                             <!-- Product price-->
                             <span class="text-muted text-decoration-line-through">$50.00</span>
                             $25.00
@@ -84,7 +92,7 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Popular Item</h5>
+                            <h5 class="fw-bolder" style="font-size: 14px;">Popular Item</h5>
                             <!-- Product reviews-->
                             <div class="d-flex justify-content-center small text-warning mb-2">
                                 <div class="bi-star-fill"></div>
@@ -113,7 +121,7 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Sale Item</h5>
+                            <h5 class="fw-bolder" style="font-size: 14px;">Sale Item</h5>
                             <!-- Product price-->
                             <span class="text-muted text-decoration-line-through">$50.00</span>
                             $25.00
@@ -133,7 +141,7 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Fancy Product</h5>
+                            <h5 class="fw-bolder" style="font-size: 14px;">Fancy Product</h5>
                             <!-- Product price-->
                             $120.00 - $280.00
                         </div>
@@ -154,7 +162,7 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Special Item</h5>
+                            <h5 class="fw-bolder" style="font-size: 14px;">Special Item</h5>
                             <!-- Product reviews-->
                             <div class="d-flex justify-content-center small text-warning mb-2">
                                 <div class="bi-star-fill"></div>
@@ -182,7 +190,7 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Popular Item</h5>
+                            <h5 class="fw-bolder" style="font-size: 14px;">Popular Item</h5>
                             <!-- Product reviews-->
                             <div class="d-flex justify-content-center small text-warning mb-2">
                                 <div class="bi-star-fill"></div>
