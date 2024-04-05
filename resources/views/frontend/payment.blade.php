@@ -1,11 +1,5 @@
 @extends('auth')
 @section('contents')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment</title>
   <style>
     body {
   font-family: Arial, sans-serif;
@@ -65,10 +59,10 @@ input[type="submit"] {
   color: #4a4a4a;
 }
   </style>
-</head>
 <body>
   <h1>AVERY</h1>
   <div class="container">
+    
   <form action="paymentConnect.php" method="post">
     <h2>Contact</h2>
     <input type="email" name="email" placeholder="Email" required>
@@ -87,10 +81,10 @@ input[type="submit"] {
     <input type="number" placeholder="Quantity" name="quantity">
     <input type="submit" name="submit" style="background-color: black; color: white;">Continue to shipping
   </form>
+
   <div class="add">
     <a href="#">Return to cart</a>
   </div>
+
   </div>
-</body>
-</html>
 @endsession

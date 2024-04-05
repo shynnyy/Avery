@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Shop Homepage - Start Bootstrap Template</title>
+        <title>Avery-Averythings Youneed Averythings Younique</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -24,7 +24,9 @@
         </div>
 
         <!-- Footer-->
-        @include('frontend.layouts.footer')
+        <div class="footer">
+            @include('frontend.layouts.footer')
+        </div>
 
         <!-- Bootstrap core JS-->
         <script src="{{ asset('frontend/vendor/bootstrap5/bootstrap.bundle.min.js')}}"></script>

@@ -1,0 +1,89 @@
+.center-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Warna hitam dengan opacity 70% */
+    padding: 80px; /* Lebih besar padding */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Efek bayangan */
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto; /* Scrolling jika konten melebihi kotak */
+    width: 60%; /* Lebar kotak hitam */
+}
+.center-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.center-content h1 {
+    margin-top: 0;
+    text-align: center;
+    color: #fff; /* Warna teks putih */
+}
+
+/* CSS untuk tampilan dua kolom */
+.container-wrapper {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto; /* Mengurangi margin untuk tampilan yang lebih rapi */
+}
+.container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    margin-right: 30px;
+}
+.container:last-child {
+    margin-right: 0;
+}
+.container h2 {
+    text-align: center;
+}
+.container hr {
+    height: 2px;
+    background-color: black;
+    margin-bottom: 10px;
+}
+.container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container input[type="email"],
+.container input[type="password"] {
+    width: 250px;
+    padding: 11px; /* Perbesar tinggi input */
+    margin-top: 10px;
+    margin-bottom: 15px; /* Perpanjang jarak bawah input */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Memastikan padding dan border tidak menambah lebar elemen */
+}
+.container button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.container button:hover {
+    background-color: #333; /* Ubah warna ketika dihover */
+}
+/* Menyejajarkan tombol Sign In ke kiri */
+.signIn {
+    margin-top: 20px;
+    align-self: flex-start;
+}
+/* Paragraf untuk pesan log in */
+.login-message {
+    color: gray;
+    text-align: center;
+    margin-bottom: 20px;
+}
