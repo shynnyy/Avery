@@ -2,7 +2,7 @@
     <footer class="py-5" style="background-color: black;">
         <div class="row">
             <div class="col-md-5 offset-md-1 mb-3">
-                <h5>Averythings Youneed<br><br>Averythings Younique</h5>
+                <h5>Averything is Your need<br><br>Averything is Younique</h5>
             </div>
             <div class="col-6 col-md-2 mb-3" style="font-size: 14px">
                 <ul class="nav flex-column">
