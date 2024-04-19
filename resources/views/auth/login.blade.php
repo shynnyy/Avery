@@ -130,11 +130,6 @@
     <a class="navbar-brand" href="#">
         <img src="{{ asset('img/brandlogo.jpeg') }}" alt="Your Logo" height="30"> <!-- Adjust the path and height as needed -->
     </a>
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('about') }}">About Us</a> <!-- Adjust the href as needed -->
-        </li>
-    </ul>
 </nav>
 
 <body class="bg-gradient-primary">

@@ -23,12 +23,8 @@
                             <!-- Product name-->
                             <h5 class="fw-bolder" style="font-size: 14px;">Fancy Product</h5>
                             <!-- Product price-->
-                            $40.00 - $80.00
+                            IDR
                         </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                     </div>
                 </div>
             </div>
@@ -52,13 +48,9 @@
                                 <div class="bi-star-fill"></div>
                             </div>
                             <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">$20.00</span>
-                            $18.00
+                            <span class="text-muted text-decoration-line-through">IDR</span>
+                            IDR
                         </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                     </div>
                 </div>
             </div>
@@ -74,13 +66,9 @@
                             <!-- Product name-->
                             <h5 class="fw-bolder" style="font-size: 14px;">Sale Item</h5>
                             <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">$50.00</span>
-                            $25.00
+                            <span class="text-muted text-decoration-line-through">IDR</span>
+                            IDR
                         </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                     </div>
                 </div>
             </div>
@@ -102,12 +90,8 @@
                                 <div class="bi-star-fill"></div>
                             </div>
                             <!-- Product price-->
-                            $40.00
+                            IDR
                         </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                     </div>
                 </div>
             </div>
@@ -123,13 +107,9 @@
                             <!-- Product name-->
                             <h5 class="fw-bolder" style="font-size: 14px;">Sale Item</h5>
                             <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">$50.00</span>
-                            $25.00
+                            <span class="text-muted text-decoration-line-through">IDR</span>
+                            IDR
                         </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                     </div>
                 </div>
             </div>
@@ -143,12 +123,8 @@
                             <!-- Product name-->
                             <h5 class="fw-bolder" style="font-size: 14px;">Fancy Product</h5>
                             <!-- Product price-->
-                            $120.00 - $280.00
+                            IDR
                         </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                     </div>
                 </div>
             </div>
@@ -172,13 +148,9 @@
                                 <div class="bi-star-fill"></div>
                             </div>
                             <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">$20.00</span>
-                            $18.00
+                            <span class="text-muted text-decoration-line-through">IDR</span>
+                            IDR
                         </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                     </div>
                 </div>
             </div>
@@ -200,12 +172,8 @@
                                 <div class="bi-star-fill"></div>
                             </div>
                             <!-- Product price-->
-                            $40.00
+                            IDR
                         </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                     </div>
                 </div>
             </div>
