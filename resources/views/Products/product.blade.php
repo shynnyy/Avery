@@ -30,7 +30,9 @@
                     @foreach ($Products as $row)
                     <tr>
                         <th> {{ $no++ }} </th>
-                        <td> <img src="{{ asset('public/pictures/' . $row->img) }}" alt="Product Image" style="max-width: 100px;"> </td>
+                        <td>
+                            <img src="{{ asset('pictures/'.$row->img) }}" alt="" style="width: 100px;">
+                        </td>
                         <td> {{ $row->product_code }} </td>
                         <td> {{ $row->product_name }} </td>
                         <td> {{ $row->Category->name }} </td>

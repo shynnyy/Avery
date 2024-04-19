@@ -8,17 +8,17 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('about') }}" style="font-size: 12px;">ABOUT US</a></li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('index') }}">
-                        <img act src="{{ asset('pictures/brandlogo.jpeg') }}" alt="Description" style="width: 80px; height: auto;">
+                        <img act src="{{ asset('img/brandlogo.jpeg') }}" alt="Description" style="width: 80px; height: auto;">
                     </a>
                 </li>
             </ul>
             <form class="d-flex">
                 <a href="{{ route('dashboard') }}" style="font-size: 13px;">
-                    <img src="{{ asset('pictures/account.jpg') }}" alt="My Account" style="width: 20px; height: 20px; margin-right: 20px;">
+                    <img src="{{ asset('img/account.jpg') }}" alt="My Account" style="width: 20px; height: 20px; margin-right: 20px;">
                 </a>
 
                 <button class="btn" type="submit" style="font-size: 13px;">
-                    <img src="{{ asset('pictures/cart.png') }}" alt="Cart" style="width: 20px; height: 20px;" class="me-1">
+                    <img src="{{ asset('img/cart.png') }}" alt="Cart" style="width: 20px; height: 20px;" class="me-1">
                     <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                 </button>
             </form>

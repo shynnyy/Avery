@@ -26,6 +26,11 @@ class ColorController extends Controller
 
         return view('Color.form', ['Color'=> $Color]);
     }
+    public function delete($id){
+        Color::find($id)->delete();
+        return redirect()->route('color');
+    }
+
     public function update(Request $request, $id){
         $Color = [
             'name'=> $request->name,

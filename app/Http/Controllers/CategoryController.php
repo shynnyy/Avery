@@ -27,6 +27,11 @@ class CategoryController extends Controller
 
         return view('Category.form', ['Category'=> $Category]);
     }
+    public function delete($id){
+        Category::find($id)->delete();
+        return redirect()->route('category');
+    }
+
     public function update(Request $request, $id){
         $Category = [
             'name'=> $request->name,

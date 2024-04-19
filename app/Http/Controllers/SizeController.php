@@ -26,6 +26,12 @@ class SizeController extends Controller
 
         return view('Size.form', ['Size'=> $Size]);
     }
+
+    public function delete($id){
+        Size::find($id)->delete();
+        return redirect()->route('size');
+    }
+
     public function update(Request $request, $id){
         $Size = [
             'name'=> $request->name,
