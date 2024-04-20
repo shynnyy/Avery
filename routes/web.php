@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SizeController;
 use App\Http\Controllers\AdminController;
@@ -9,7 +10,7 @@ use App\Http\Controllers\ColorController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
-
+use App\Models\Cart;
 
 Route::get('payment', function () {
     return view('auth.payment');
@@ -67,8 +68,18 @@ Route::middleware('auth')->group(function(){
 
     });
 
+    Route::controller(CartController::class)->prefix('cart')->group(function(){
+        Route::get('','cart')->name('cart');
+        Route::get('delete/{id}','delete')->name('cart.delete');
+    });
+    Route::get('cart', function () {
+        return view('Cart.cart');
+    });
+
 Route::get('index', [HomeController::class, 'index'])->name('index');
-Route::get('size', [HomeController::class, 'size'])->name('size');
+Route::get('cart', [CartController::class, 'cart'])->name('cart');
+Route::get('cart', [HomeController::class, 'cart'])->name('cart');
+Route::get('fitting', [SizeController::class, 'fitting'])->name('fitting');
 Route::get('female', [HomeController::class, 'female'])->name('female');
 Route::get('male', [HomeController::class, 'male'])->name('male');
 Route::get('about', [HomeController::class, 'about'])->name('about');

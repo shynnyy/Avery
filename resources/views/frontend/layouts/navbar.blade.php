@@ -16,11 +16,9 @@
                 <a href="{{ route('dashboard') }}" style="font-size: 13px;">
                     <img src="{{ asset('img/account.jpg') }}" alt="My Account" style="width: 20px; height: 20px; margin-right: 20px;">
                 </a>
-
-                <button class="btn" type="submit" style="font-size: 13px;">
-                    <img src="{{ asset('img/cart.png') }}" alt="Cart" style="width: 20px; height: 20px;" class="me-1">
-                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                </button>
+                <a href="{{ route('cart') }}" style="font-size: 13px;">
+                    <img src="{{ asset('img/cart.png') }}" alt="Cart" style="width: 20px; height: 20px; margin-right: 20px;">
+                </a>
             </form>
         </div>
     </div>

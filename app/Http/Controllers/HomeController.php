@@ -33,4 +33,7 @@ class HomeController extends Controller
     public function size(){
         return view("Size.Size");
     }
+    public function cart(){
+        return view("Cart.cart");
+    }
 }

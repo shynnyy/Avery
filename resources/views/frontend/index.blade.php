@@ -63,29 +63,29 @@
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
         <div id="product-cards" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <!-- Product cards will be dynamically generated here -->
+            <!-- Product cards will be dynamically generated here -->  
         </div>
     </div>
 </section>
 
 <script>
     const products = [
-        { name: 'FREAK SEE THROUGH SLIM SHIRT', image: 'pictures/P1.jpg', color:'#E59BE9' , colorName: 'Purple' },
-        { name: 'BULB DENIM WIDE PANTS', image: 'pictures/P2.jpg', color: '#C4E4FF', colorName: 'White denim' },
-        { name: 'SMOOTHIE BURTON WRAP HOOD', image: 'pictures/P3.jpg', color: 'rgb(90, 89, 89)', colorName: 'Dark gray' },
-        { name: 'FEAR DENIM WIDE PANTS', image: 'pictures/P4.jpg', color: 'rgb(47, 52, 104)', colorName: 'Blue denim' },
-        { name: 'LUCKY SHIRRING TOP & MUFFLER', image: 'pictures/P5.jpg', color: 'rgb(90, 89, 89)', colorName: 'Dark gray' },
-        { name: 'VENUS RIBBON CARGO WIDE PANTS', image: 'pictures/P6.jpg', color: 'Beige' },
-        { name: 'RIBBON PLEATED SKIRT', image: 'pictures/P7.jpg', color: 'rgb(90, 89, 89)', colorName: 'Dark gray' },
-        { name: 'LIVE SHIRRING TOP & MUFFLER', image: 'pictures/P8.jpg', color: 'Black' },
-        { name: 'NON-FADED SLAP RAW DENIM PANTS', image: 'pictures/p1.jpeg', color: 'rgb(47, 52, 104)', colorName: 'Denim Blue' },
-        { name: 'MODERN CHECK SHIRT', image: 'pictures/p7.png', color: 'Black' },
-        { name: 'EMBO WASHING BANDING DENIM PANTS', image: 'pictures/p2.jpeg', color: 'Black' },
-        { name: 'DENIM CROP BIKER JACKET', image: 'pictures/p5.png', color: 'rgb(90, 89, 89)', colorName: 'Dark gray' },
-        { name: 'BIG HAT HOODIE', image: 'pictures/p6.jpeg', color: 'Black' },
-        { name: 'MUD TIN WASHING CARGO DENIM PANTS', image: 'pictures/p3.jpeg', color: 'Beige' },
-        { name: 'BY ROLL UP DENIM SHIRT', image: 'pictures/p8.jpeg', color: '#C4E4FF', colorName: 'Denim' },
-        { name: 'POINT BRUSH DENIM PANTS', image: 'pictures/p4.jpeg', color: 'Black' }
+        { name: 'FREAK SEE THROUGH SLIM SHIRT', image: 'pictures/P1.jpg', color:'#E59BE9' , colorName: 'Purple' , price:'289.000' },
+        { name: 'BULB DENIM WIDE PANTS', image: 'pictures/P2.jpg', color: '#C4E4FF', colorName: 'White denim', price:'339.000'  },
+        { name: 'SMOOTHIE BURTON WRAP HOOD', image: 'pictures/P3.jpg', color: 'rgb(90, 89, 89)', colorName: 'Dark gray' , price:'278.000' },
+        { name: 'FEAR DENIM WIDE PANTS', image: 'pictures/P4.jpg', color: 'rgb(47, 52, 104)', colorName: 'Blue denim', price:'432.000'  },
+        { name: 'LUCKY SHIRRING TOP & MUFFLER', image: 'pictures/P5.jpg', color: 'rgb(90, 89, 89)', colorName: 'Dark gray' , price:'189.000' },
+        { name: 'VENUS RIBBON CARGO WIDE PANTS', image: 'pictures/P6.jpg', color: 'Beige', price:'250000'  },
+        { name: 'RIBBON PLEATED SKIRT', image: 'pictures/P7.jpg', color: 'rgb(90, 89, 89)', colorName: 'Dark gray', price:'167.000'  },
+        { name: 'LIVE SHIRRING TOP & MUFFLER', image: 'pictures/P8.jpg', color: 'Black', price:'159.000'  },
+        { name: 'NON-FADED SLAP RAW DENIM PANTS', image: 'pictures/p1.jpeg', color: 'rgb(47, 52, 104)', colorName: 'Denim Blue', price: '387.000' },
+        { name: 'MODERN CHECK SHIRT', image: 'pictures/p7.png', color: 'Black', price: '457.000' },
+        { name: 'EMBO WASHING BANDING DENIM PANTS', image: 'pictures/p2.jpeg', color: 'Black', price: '377.000' },
+        { name: 'DENIM CROP BIKER JACKET', image: 'pictures/p5.png', color: 'rgb(90, 89, 89)', colorName: 'Dark gray', price: '897.000' },
+        { name: 'BIG HAT HOODIE', image: 'pictures/p6.jpeg', color: 'Black', price: '789.000' },
+        { name: 'MUD TIN WASHING CARGO DENIM PANTS', image: 'pictures/p3.jpeg', color: 'Beige' , price: '377.000'},
+        { name: 'BY ROLL UP DENIM SHIRT', image: 'pictures/p8.jpeg', color: '#C4E4FF', colorName: 'Denim', price: '255.000' },
+        { name: 'POINT BRUSH DENIM PANTS', image: 'pictures/p4.jpeg', color: 'Black', price: '365.000' }
     ];
 
     const shuffleProducts = () => {
@@ -101,7 +101,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <h5 class="fw-bolder" style="font-size: 14px;">${product.name}</h5>
-                                IDR
+                                IDR ${product.price}
                             </div>
                             <div class="mt-3">
                                 <button type="button" class="btn btn-outline-dark size-btn" data-size="s">S</button>
@@ -116,7 +116,7 @@
                                 </div>
                             </div>
                             <div>
-                                <a class="size-guide" href="{{ route('size') }}"> Size Guide</a>
+                                <a class="size-guide" href="{{ route('fitting') }}"> Size Guide</a>
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">

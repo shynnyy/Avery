@@ -15,6 +15,7 @@ class ProductController extends Controller
         $Products = Products::get();
         return view('Products.product', ['Products'=> $Products]);
     }
+    
     public function add(){
         $Category = Category::get();
         $Size = Size::get();
