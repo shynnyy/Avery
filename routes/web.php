@@ -68,6 +68,7 @@ Route::middleware('auth')->group(function(){
     });
 
 Route::get('index', [HomeController::class, 'index'])->name('index');
+Route::get('size', [HomeController::class, 'size'])->name('size');
 Route::get('female', [HomeController::class, 'female'])->name('female');
 Route::get('male', [HomeController::class, 'male'])->name('male');
 Route::get('about', [HomeController::class, 'about'])->name('about');

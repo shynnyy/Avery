@@ -36,6 +36,11 @@
     background-color: black; /* Warna latar belakang saat di-hover */
     color: white; /* Warna teks saat di-hover */
     }
+    .color-option-container {
+    display: flex;
+    justify-content: center;
+    }
+
 </style>
 
 <section class="py-5">
@@ -53,25 +58,31 @@
                             <!-- Product price-->
                             IDR
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 d-flex justify-content-center">
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="s">S</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="m">M</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="l">L</button>
-                            <button type="button" class="btn btn-outline-dark size-btn" data-size="xl">XL</button>
+                        </div>
+                        <div class="color-option-container mt-3">
+                            <div class="color-option" style="background-color: rgb(47, 52, 104); width: 20px; height: 20px; border-radius: 50%; display: inline-block;"></div>
+                            <span style="font-size: 12px;">Denim blue</span>
+                        </div>
+                        <div>
+                            <a class="size-guide" href="{{ route('size') }}"> Size Guide</a>
+                        </div>
+                        <div class="mt-3">
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
-                            <a class="btn btn-view-detail mt-auto" href="#">View detail</a>
+                            <a class="btn btn-view-detail mt-auto" href="#">Add to cart</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col mb-5">
                 <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                     <!-- Product image-->
                     <img class="card-img-top" src="{{ asset('pictures/p7.png') }}" alt="..." />
                     <!-- Product details-->
@@ -80,28 +91,35 @@
                             <!-- Product name-->
                             <h5 class="fw-bolder" style="font-size: 14px;">MODERN CHECK SHIRT</h5>
                             <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">IDR</span>
                             IDR
                         </div>
+                        <br>
                         <div class="mt-3">
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="s">S</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="m">M</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="l">L</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="xl">XL</button>
                         </div>
+                        <div class="mt-3">
+                            <div class="color-option-container mt-3">
+                                <div class="color-option" style="background-color: black; width: 20px; height: 20px; border-radius: 50%; display: inline-block;"></div>
+                                <span style="font-size: 12px;">Black</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="size-guide" href="{{ route('size') }}"> Size Guide</a>
+                        </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
-                            <a class="btn btn-view-detail mt-auto" href="#">View detail</a>
+                            <a class="btn btn-view-detail mt-auto" href="#">Add to cart</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col mb-5">
                 <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                     <!-- Product image-->
                     <img class="card-img-top" src="{{ asset('pictures/p2.jpeg') }}" alt="..." />
                     <!-- Product details-->
@@ -110,20 +128,27 @@
                             <!-- Product name-->
                             <h5 class="fw-bolder" style="font-size: 14px;">EMBO WASHING BANDING DENIM PANTS</h5>
                             <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">IDR</span>
                             IDR
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 d-flex justify-content-center">
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="s">S</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="m">M</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="l">L</button>
-                            <button type="button" class="btn btn-outline-dark size-btn" data-size="xl">XL</button>
+                        </div>
+                        <div class="mt-3">
+                            <div class="color-option-container mt-3">
+                                <div class="color-option" style="background-color: black; width: 20px; height: 20px; border-radius: 50%; display: inline-block;"></div>
+                                <span style="font-size: 12px;">Black</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="size-guide" href="{{ route('size') }}"> Size Guide</a>
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
-                            <a class="btn btn-view-detail mt-auto" href="#">View detail</a>
+                            <a class="btn btn-view-detail mt-auto" href="#">Add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -140,26 +165,34 @@
                             <!-- Product price-->
                             IDR
                         </div>
+                        <br>
                         <div class="mt-3">
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="s">S</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="m">M</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="l">L</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="xl">XL</button>
                         </div>
+                        <div class="mt-3">
+                            <div class="color-option-container mt-3">
+                                <div class="color-option" style="background-color: rgb(90, 89, 89); width: 20px; height: 20px; border-radius: 50%; display: inline-block;"></div>
+                                <span style="font-size: 12px;">Dark gray</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="size-guide" href="{{ route('size') }}"> Size Guide</a>
+                        </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
-                            <a class="btn btn-view-detail mt-auto" href="#">View detail</a>
+                            <a class="btn btn-view-detail mt-auto" href="#">Add to cart</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col mb-5">
                 <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                    <!-- Product image-->
+                   <!-- Product image-->
                     <img class="card-img-top" src="{{ asset('pictures/p6.jpeg') }}" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
@@ -167,20 +200,29 @@
                             <!-- Product name-->
                             <h5 class="fw-bolder" style="font-size: 14px;">BIG HAT HOODIE</h5>
                             <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">IDR</span>
                             IDR
                         </div>
+                        <br>
                         <div class="mt-3">
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="s">S</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="m">M</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="l">L</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="xl">XL</button>
                         </div>
+                        <div class="mt-3">
+                            <div class="color-option-container mt-3">
+                                <div class="color-option" style="background-color: black; width: 20px; height: 20px; border-radius: 50%; display: inline-block;"></div>
+                                <span style="font-size: 12px;">Black</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="size-guide" href="{{ route('size') }}"> Size Guide</a>
+                        </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
-                            <a class="btn btn-view-detail mt-auto" href="#">View detail</a>
+                            <a class="btn btn-view-detail mt-auto" href="#">Add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -197,25 +239,31 @@
                             <!-- Product price-->
                             IDR
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 d-flex justify-content-center">
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="s">S</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="m">M</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="l">L</button>
-                            <button type="button" class="btn btn-outline-dark size-btn" data-size="xl">XL</button>
+                        </div>
+                        <div class="mt-3">
+                            <div class="color-option-container mt-3">
+                                <div class="color-option" style="background-color: #F7DCB9; width: 20px; height: 20px; border-radius: 50%; display: inline-block;"></div>
+                                <span style="font-size: 12px;">Beige</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="size-guide" href="{{ route('size') }}"> Size Guide</a>
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
-                            <a class="btn btn-view-detail mt-auto" href="#">View detail</a>
+                            <a class="btn btn-view-detail mt-auto" href="#">Add to cart</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col mb-5">
                 <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                     <!-- Product image-->
                     <img class="card-img-top" src="{{ asset('pictures/p8.jpeg') }}" alt="..." />
                     <!-- Product details-->
@@ -224,20 +272,29 @@
                             <!-- Product name-->
                             <h5 class="fw-bolder" style="font-size: 14px;">BY ROLL UP DENIM SHIRT</h5>
                             <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">IDR</span>
-                            IDR
+                           IDR
                         </div>
+                        <br>
                         <div class="mt-3">
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="s">S</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="m">M</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="l">L</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="xl">XL</button>
                         </div>
+                        <div class="mt-3">
+                            <div class="color-option-container mt-3">
+                                <div class="color-option" style="background-color: #C4E4FF; width: 20px; height: 20px; border-radius: 50%; display: inline-block;"></div>
+                                <span style="font-size: 12px;">Denim blue</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="size-guide" href="{{ route('size') }}"> Size Guide</a>
+                        </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
-                            <a class="btn btn-view-detail mt-auto" href="#">View detail</a>
+                            <a class="btn btn-view-detail mt-auto" href="#">Add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -254,17 +311,26 @@
                             <!-- Product price-->
                             IDR
                         </div>
-                        <div class="mt-3">
+                        <br>
+                        <div class="mt-3 d-flex justify-content-center">
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="s">S</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="m">M</button>
                             <button type="button" class="btn btn-outline-dark size-btn" data-size="l">L</button>
-                            <button type="button" class="btn btn-outline-dark size-btn" data-size="xl">XL</button>
+                        </div>
+                        <div class="mt-3">
+                            <div class="color-option-container mt-3">
+                                <div class="color-option" style="background-color: black; width: 20px; height: 20px; border-radius: 50%; display: inline-block;"></div>
+                                <span style="font-size: 12px;">Black</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="size-guide" href="{{ route('size') }}"> Size Guide</a>
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
-                            <a class="btn btn-view-detail mt-auto" href="#">View detail</a>
+                            <a class="btn btn-view-detail mt-auto" href="#">Add to cart</a>
                         </div>
                     </div>
                 </div>

@@ -39,4 +39,8 @@ class SizeController extends Controller
         Size::find($id)->update($Size);
         return redirect()->route('size');
     }
+    public function guide()
+    {
+        Return view("Size.Size");
+    }
 }

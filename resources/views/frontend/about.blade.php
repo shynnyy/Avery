@@ -147,18 +147,18 @@
         <p>We are proud to collaborate with some of the most prestigious names in the fashion industry.</p>
         <div class="row">
             <div class="col-md-3 text-center">
-                <img src="path/to/prada-logo.jpg" alt="Prada" class="img-fluid" style="max-height: 100px;">
+                <img src="{{ asset('img/images-3.png') }}" alt="Acubi Club" class="img-fluid" style="max-height: 100px;">
             </div>
             <div class="col-md-3 text-center">
-                <img src="path/to/chrome-hearts-logo.jpg" alt="Chrome Hearts" class="img-fluid"
+                <img src="{{ asset('img/images-5.jpeg') }}" alt="Chrome Hearts" class="img-fluid"
                     style="max-height: 100px;">
             </div>
             <div class="col-md-3 text-center">
-                <img src="path/to/gallery-dept-logo.jpg" alt="Gallery Dept" class="img-fluid"
+                <img src="{{ asset('img/images-2.png') }}" alt="Gallery Dept" class="img-fluid"
                     style="max-height: 100px;">
             </div>
             <div class="col-md-3 text-center">
-                <img src="path/to/another-brand-logo.jpg" alt="Another Brand" class="img-fluid"
+                <img src="{{ asset('img/1.png') }}" alt="Opening Project" class="img-fluid"
                     style="max-height: 100px;">
             </div>
         </div>
