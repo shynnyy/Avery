@@ -17,11 +17,10 @@
                         <th>Product IMG</th>
                         <th>Product Code</th>
                         <th>Product Name</th>
+                        <th>Gender</th>
                         <th>Product Category</th>
                         <th>Product Price</th>
                         <th>Product Quantity</th>
-                        <th>Product Size</th>
-                        <th>Product Color</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -35,11 +34,10 @@
                         </td>
                         <td> {{ $row->product_code }} </td>
                         <td> {{ $row->product_name }} </td>
+                        <td> {{ $row->gender }}</td>
                         <td> {{ $row->Category->name }} </td>
                         <td> {{ $row->price }} </td>
                         <td> {{ $row->quantity }} </td>
-                        <td> {{ $row->Size->name }} </td>
-                        <td> {{ $row->Color->name }} </td>
                         <td>
                             <a href="{{ route('products.edit', $row->id) }}" class="btn btn-warning">Edit</a>
                             <a href="{{ route('products.delete', $row->id) }}" class="btn btn-danger">Delete</a>

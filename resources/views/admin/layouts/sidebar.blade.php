@@ -27,11 +27,6 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Size</span></a>
     </li>
-    <li class="nav-item active">
-        <a class="nav-link" href="{{ route('color') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Color</span></a>
-    </li>
     @endif
 
     <!-- Divider -->

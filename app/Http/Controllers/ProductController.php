@@ -15,26 +15,28 @@ class ProductController extends Controller
         $Products = Products::get();
         return view('Products.product', ['Products'=> $Products]);
     }
-    
     public function add(){
         $Category = Category::get();
-        $Size = Size::get();
-        $Color = Color::get();
-        return view('Products.form', ['Category'=> $Category, 'Size'=> $Size, 'Color'=> $Color]);
+        return view('Products.form', ['Category'=> $Category]);
     }
     public function save(Request $request){
-        $imageName = $request->file('img')->getClientOriginalName();
-        $request->file('img')->move('pictures/', $imageName);
+        if ($request->hasFile('img')) {
+            $imageName = $request->file('img')->getClientOriginalName();
+            $request->file('img')->move('pictures/', $imageName);
+        } else {
+            $imageName = null;
+        }
+
         $Products = [
             'img'=> $imageName,
             'product_code' => $request->product_code,
             'product_name' => $request->product_name,
+            'gender'=> $request->gender,
             'category_id' => $request->category_id,
             'price' => $request->price,
             'quantity' => $request->quantity,
-            'size_id'=> $request->size_id,
-            'color_id'=> $request->color_id
         ];
+
         Products::create($Products);
         return redirect()->route('products');
     }
@@ -42,26 +44,32 @@ class ProductController extends Controller
     public function edit($id){
         $Products = Products::find($id);
         $Category = Category::get();
-        $Size = Size::get();
-        $Color = Color::get();
 
-        return view('Products.form', ['Products'=> $Products, 'Category'=> $Category,'Size'=> $Size,'Color'=> $Color]);
+        return view('Products.form', ['Products'=> $Products, 'Category'=> $Category]);
     }
     public function update(Request $request, $id){
+        $Products = Products::find($id);
+
+        if ($request->hasFile('img')) {
+            if ($Products->img) {
+                unlink(public_path('pictures/' . $Products->img));
+            }
+
         $imageName = $request->file('img')->getClientOriginalName();
         $request->file('img')->move('pictures/', $imageName);
-        $Products = [
-            'img'=> $imageName,
-            'product_code' => $request->product_code,
-            'product_name' => $request->product_name,
-            'category_id' => $request->category_id,
-            'price' => $request->price,
-            'quantity' => $request->quantity,
-            'size_id'=> $request->size_id,
-            'color_id'=> $request->color_id
-        ];
-        Products::find($id)->update($Products);
-        return redirect()->route('products');
+        $Products->img = $imageName;
+    }
+
+    $Products->product_code = $request->product_code;
+    $Products->product_name = $request->product_name;
+    $Products->gender = $request->gender;
+    $Products->category_id = $request->category_id;
+    $Products->price = $request->price;
+    $Products->quantity = $request->quantity;
+
+    $Products->save();
+
+    return redirect()->route('products');
     }
     public function delete($id){
         Products::find($id)->delete();

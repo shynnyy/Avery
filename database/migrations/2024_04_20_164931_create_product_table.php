@@ -16,11 +16,10 @@ return new class extends Migration
             $table->string('img');
             $table->string('product_code')->nullable();
             $table->string('product_name')->nullable();
+            $table->string('gender')->nullable();
             $table->string('product_category')->nullable();
             $table->string('price')->nullable();
             $table->integer('quantity')->nullable();
-            $table->string('size')->nullable();
-            $table->string('color')->nullable();
             $table->timestamps();
         });
     }

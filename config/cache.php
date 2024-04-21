@@ -89,6 +89,12 @@ return [
             'driver' => 'octane',
         ],
 
+        'avery' => [
+            'driver' => 'file',
+            'path' => storage_path('framework/cache/avery'),
+            'lock_path' => storage_path('framework/cache/avery'), 
+        ],
+
     ],
 
     /*

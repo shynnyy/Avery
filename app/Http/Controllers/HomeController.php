@@ -1,29 +1,38 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Products;
+use App\Models\Size;
 use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
-    public function index(){
-        // Get all file names from the pictures directory
-        $imageFiles = File::files(public_path('pictures'));
+    public function index($sortBy = 'newest') {
+        if ($sortBy == 'highest') {
+            $products = Products::orderBy('price', 'desc')->get();
+        } elseif ($sortBy == 'lowest') {
+            $products = Products::orderBy('price', 'asc')->get();
+        } else { // Default to newest
+            $products = Products::orderBy('created_at', 'desc')->get();
+        }
 
-        // Convert file paths to URLs
-        $images = collect($imageFiles)->map(function ($file) {
-            return asset('pictures/' . $file->getFilename());
-        })->shuffle()->all();
+        $sizes = Size::all();
 
-        // Pass the shuffled images to the view
-        return view("frontend.index", ['images' => $images]);
+        return view("frontend.catalogue", ['Products' => $products, 'Sizes' => $sizes]);
     }
 
     public function female(){
-        return view("frontend.female");
+        $products = Products::where('gender', 'Female')->get();
+        $sizes = Size::all();
+
+        return view("frontend.catalogue", ['Products' => $products, 'Sizes' => $sizes]);
     }
 
     public function male(){
-        return view("frontend.male");
+        $products = Products::where('gender', 'Male')->get();
+        $sizes = Size::all();
+
+        return view("frontend.catalogue", ['Products' => $products, 'Sizes' => $sizes]);
     }
 
     public function about(){

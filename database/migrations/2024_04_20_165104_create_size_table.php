@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('color', function (Blueprint $table) {
+        Schema::create('size', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->timestamps();
-        });
-        Schema::table('product', function (Blueprint $table) {
-            $table->dropColumn('color');
-            $table->foreignId('color_id')->nullable()->references('id')->on('color');
         });
     }
 
@@ -27,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('color');
+        Schema::dropIfExists('size');
     }
 };

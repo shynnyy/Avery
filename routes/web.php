@@ -58,16 +58,6 @@ Route::middleware('auth')->group(function(){
         Route::get('delete/{id}','delete')->name('size.delete');
     });
 
-    Route::controller(ColorController::class)->prefix('color')->group(function(){
-        Route::get('','index')->name('color');
-        Route::get('add','add')->name('color.add');
-        Route::post('add','save')->name('color.add.save');
-        Route::get('edit/{id}','edit')->name('color.edit');
-        Route::post('edit/{id}','update')->name('color.add.update');
-        Route::get('delete/{id}','delete')->name('color.delete');
-
-    });
-
     Route::controller(CartController::class)->prefix('cart')->group(function(){
         Route::get('','cart')->name('cart');
         Route::get('delete/{id}','delete')->name('cart.delete');
@@ -75,6 +65,11 @@ Route::middleware('auth')->group(function(){
     Route::get('cart', function () {
         return view('Cart.cart');
     });
+
+    Route::get('/', function () {
+        return redirect()->route('index');
+    });
+
 
 Route::get('index', [HomeController::class, 'index'])->name('index');
 Route::get('cart', [CartController::class, 'cart'])->name('cart');

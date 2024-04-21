@@ -15,6 +15,9 @@
                 <div class="form-group">
                     <label for="img" class="form-label">Product Image</label>
                     <input class="form-control-file" type="file" id="img" name="img">
+                    @if(isset($Products) && $Products->img)
+                        <img src="{{ asset('pictures/'.$Products->img) }}" alt="Product Image" style="max-width: 200px;">
+                    @endif
                 </div>
                 <div class="form-group">
                     <label for="product_code">Product Code</label>
@@ -25,10 +28,17 @@
                     <input type="text" class="form-control" id="product_name" name="product_name" value="{{ isset($Products) ? $Products->product_name : '' }}">
                 </div>
                 <div class="form-group">
+                    <label>Gender</label><br>
+                    <label><input type="radio" name="gender" value="Female" {{ isset($Products) && $Products->gender == 'Female' ? 'checked' : '' }}> Female</label>
+                    <label><input type="radio" name="gender" value="Male" {{ isset($Products) && $Products->gender == 'Male' ? 'checked' : '' }}> Male</label>
+                </div>
+                <div class="form-group">
                     <label for="category_id">Product Category</label>
                     <select name="category_id" id="category_id" class="custom-select">
                         @foreach ($Category as $row)
-                        <option value="{{ $row->id }}">{{ $row->name }}</option>
+                            <option value="{{ $row->id }}" {{ isset($Products) && $Products->category_id == $row->id ? 'selected' : '' }}>
+                                {{ $row->name }}
+                            </option>
                         @endforeach
                     </select>
                 </div>
@@ -45,22 +55,6 @@
                     <label for="quantity">Product Quantity</label>
                     <input type="number" class="form-control" id="quantity" name="quantity"  value="{{ isset($Products) ? $Products->quantity : '' }}" pattern="\d+" title="Please enter numbers only">
                 </div>
-                <div class="form-group">
-                    <label for="size_id">Product Size</label>
-                    <select name="size_id" id="size_id" class="custom-select">
-                        @foreach ($Size as $row)
-                        <option value="{{ $row->id }}">{{ $row->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="color_id">Product Color</label>
-                    <select name="color_id" id="color_id" class="custom-select">
-                        @foreach ($Color as $row)
-                        <option value="{{ $row->id }}">{{ $row->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
             </div>
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Save</button>
@@ -70,21 +64,15 @@
 </div>
 </form>
 @endsection
-<!-- Tambahkan script ini di bagian bawah halaman Anda -->
 <script>
-    // Mendapatkan elemen input harga dan kuantitas
     var priceInput = document.getElementById('price');
     var quantityInput = document.getElementById('quantity');
 
-    // Menambahkan event listener untuk input harga
     priceInput.addEventListener('input', function(event) {
-        // Menghapus karakter selain angka dari input
         this.value = this.value.replace(/\D/g, '');
     });
 
-    // Menambahkan event listener untuk input kuantitas
     quantityInput.addEventListener('input', function(event) {
-        // Menghapus karakter selain angka dari input
         this.value = this.value.replace(/\D/g, '');
     });
 </script>
