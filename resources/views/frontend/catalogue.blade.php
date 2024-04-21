@@ -86,7 +86,6 @@
                                     IDR {{ $product->price }}
                                 </div>
                                 <div class="mt-3">
-                                    <!-- Tambahkan tombol ukuran sesuai kebutuhan -->
                                     <div class="size-btn-container">
                                         @foreach ($Sizes as $size)
                                             <button type="button" class="btn btn-outline-dark size-btn"
@@ -94,7 +93,7 @@
                                         @endforeach
                                     </div>
                                     <div class="color-option-container mt-3">
-                                        <!-- Tambahkan opsi warna sesuai kebutuhan -->
+                                        <span style="font-size: 10px;">୨ৎ color only available as the product display ୨ৎ</span>
                                     </div>
                                 </div>
                                 <div>
@@ -138,7 +137,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder" style="font-size: 14px;">${product.product_name}</h5>
-                                    IDR ${product.price}
+                                    ${product.price} IDR
                                 </div>
                                 <div class="mt-3">
                                     @foreach ($Sizes as $size)
@@ -147,9 +146,8 @@
                                 </div>
                                 <div class="mt-3">
                                     <div class="color-option-container mt-3">
-                                        <div class="color-option" style="background-color: ${product.color}; width: 20px; height: 20px; border-radius: 50%; display: inline-block;"></div>
-                                        <span style="font-size: 12px;">${product.colorName || product.color}</span>
-                                    </div>
+                                        <span style="font-size: 10px;">୨ৎ color only available as the display product ୨ৎ</span>
+                                </div>
                                 </div>
                                 <div>
                                     <a class="size-guide" href="{{ route('fitting') }}"> Size Guide</a>
