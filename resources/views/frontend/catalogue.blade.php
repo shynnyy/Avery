@@ -1,74 +1,84 @@
 @extends('frontend.layouts.app')
 @section('contents')
+    @if ($isIndexPage)
+        <header class="bg-dark py-5 header-container">
+            <div class="container px-4 px-lg-5 my-5 header-content">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Avery</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Averything is Your Need Averything is Younique</p>
+                </div>
+            </div>
+        </header>
+    @endif
     <style>
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25vh;
+        }
+
+        .header-content {
+            text-align: center;
+        }
+
+        .py-5 {
+            padding-top: 3rem !important;
+            padding-left: 3rem !important;
+            padding-right: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+
         .size-btn {
             width: 30px;
-            /* Atur lebar sesuai kebutuhan */
             height: 25px;
-            /* Atur tinggi sesuai kebutuhan */
             margin: 12px;
-            /* Atur jarak antar tombol */
             background-color: white;
-            /* Warna latar belakang awal */
             color: black;
-            /* Warna teks awal */
             border: 1px solid black;
-            /* Border hitam */
             transition: background-color 0.3s, color 0.3s;
-            /* Efek transisi saat berubah warna */
             font-size: 10px;
-            /* Atur ukuran teks */
         }
 
         .size-btn:hover {
             background-color: #f2f2f2;
-            /* Warna latar belakang saat di-hover */
         }
 
         .size-btn.active {
             background-color: black;
-            /* Warna latar belakang saat di-klik */
             color: white;
-            /* Warna teks saat di-klik */
         }
 
         .btn-view-detail {
             display: inline-block;
             padding: 8px 16px;
-            /* Atur padding sesuai kebutuhan */
             border: 1px solid black;
-            /* Atur border */
             background-color: transparent;
-            /* Latar belakang transparan */
             color: black;
-            /* Warna teks */
             text-decoration: none;
-            /* Hapus dekorasi teks */
             font-size: 14px;
-            /* Atur ukuran teks */
             transition: background-color 0.3s, color 0.3s;
-            /* Efek transisi saat hover */
         }
 
         .btn-view-detail:hover {
             background-color: black;
-            /* Warna latar belakang saat di-hover */
             color: white;
-            /* Warna teks saat di-hover */
         }
 
         .size-btn-container {
             display: flex;
-            /* Gunakan flexbox */
             justify-content: center;
-            /* Posisikan tombol di tengah secara horizontal */
             margin-top: 10px;
-            /* Atur margin atas */
         }
 
         .color-option-container {
             display: flex;
             justify-content: center;
+        }
+        .card-img-top {
+            width: 280px;
+            height: 336px;
+            object-fit: cover;
         }
     </style>
 
@@ -93,7 +103,8 @@
                                         @endforeach
                                     </div>
                                     <div class="color-option-container mt-3">
-                                        <span style="font-size: 10px;">୨ৎ color only available as the product display ୨ৎ</span>
+                                        <span style="font-size: 10px;">୨ৎ color only available as the product
+                                            display୨ৎ</span>
                                     </div>
                                 </div>
                                 <div>
@@ -146,8 +157,7 @@
                                 </div>
                                 <div class="mt-3">
                                     <div class="color-option-container mt-3">
-                                        <span style="font-size: 10px;">୨ৎ color only available as the display product ୨ৎ</span>
-                                </div>
+                                        <span style="font-size: 10px; height: 20px; border-radius:40%; ">୨ৎ color only available as the display product ୨ৎ</span>
                                 </div>
                                 <div>
                                     <a class="size-guide" href="{{ route('fitting') }}"> Size Guide</a>

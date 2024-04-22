@@ -17,22 +17,25 @@ class HomeController extends Controller
         }
 
         $sizes = Size::all();
+        $isIndexPage = true;
 
-        return view("frontend.catalogue", ['Products' => $products, 'Sizes' => $sizes]);
+        return view("frontend.catalogue", ['Products' => $products, 'Sizes' => $sizes, 'isIndexPage' => $isIndexPage]);
     }
 
     public function female(){
         $products = Products::where('gender', 'Female')->get();
         $sizes = Size::all();
+        $isIndexPage = false;
 
-        return view("frontend.catalogue", ['Products' => $products, 'Sizes' => $sizes]);
+        return view("frontend.catalogue", ['Products' => $products, 'Sizes' => $sizes, 'isIndexPage' => $isIndexPage]);
     }
 
     public function male(){
         $products = Products::where('gender', 'Male')->get();
         $sizes = Size::all();
+        $isIndexPage = false;
 
-        return view("frontend.catalogue", ['Products' => $products, 'Sizes' => $sizes]);
+        return view("frontend.catalogue", ['Products' => $products, 'Sizes' => $sizes, 'isIndexPage' => $isIndexPage]);
     }
 
     public function about(){
